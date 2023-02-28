@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>复习</title>
+  <script type="text/javascript" src="js/jquery-3.6.3.js"></script>
+    <script type="text/javascript">
+        $(function (){
+            $("#djbtn").click(function (){
+                // $("#msg").html(123)
+                $.ajax({
+                    url:"/CRM/MyServlet01",
+                    type:"GET",
+                    dataType:"json",
+                    success(data){
+                       alert(data.str1)
+
+                    }
+
+                })
+            })
+        })
+    </script>
+</head>
+<body>
+<button id="djbtn">点击</button>
+<div id="msg" style="width: 200px;height: 200px;background-color: pink;border: black 1px solid"></div>
+<div id="msg1" style="width: 200px;height: 200px;background-color: pink;border: black 1px solid">sertgwsetg</div>
+
+</body>
+</html>
